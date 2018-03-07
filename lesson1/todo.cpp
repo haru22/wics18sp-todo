@@ -22,10 +22,18 @@ int main()
 /* Function Declarations */
 void ReadFile(string fileName)
 {
-  // TODO
+  string line;
+  fileReader.open(fileName);
+  while (getline(fileReader,line)) {
+      cout << line << endl;
+  }
+  fileReader.close();
 }
 
 void WriteFile(string fileName, string text)
 {
-  // TODO
+  
+  fileWriter.open(fileName, ios::app);
+  fileWriter << text << endl;
+  fileWriter.close();
 }
