@@ -2,6 +2,7 @@ My To Do List
 =============
 [ ] Do homeworks
 [ ] Study for exam
-[ ] Apply to hackathons
+[ ] Appy to hackathons
 [x] Practice cup stacking
 [x] Go to WiCS
+[x] Complete lesson 1
