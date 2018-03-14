@@ -17,6 +17,7 @@ int main()
   string todoFile = "todo.txt";
   ReadFile(todoFile);
   //WriteFile(todoFile, "[x] Complete lesson 1");
+
 }
 
 /* Function Declarations */
@@ -34,17 +35,30 @@ void ReadFile(string fileName)
     string desc;
 
     // TODO: Get the done status from the line.
+    done = line;
+
 
     // TODO: Output depending on the done status.
-
+    if (done[0] == '1') {
+      done.replace(0,3,"[x]");
+    }
+    else {
+      done.replace(0,3,"[ ]");
+    }
     // TODO: Get and output the description from the line.
+    
 
     // TODO: Replace the '|' symbol to '@'.
+    done.replace(done.find("|"),1,"@");
 
     /* TODO CHALLENGE:
        Get the date from the description
        and output on a new line.
     */
+    desc = done.substr(done.find("@")+1);
+    done = done.substr(0,done.find("@")-1);
+    cout << done << endl;
+    cout << "   " << desc << endl;
   }
 
   // Close the file (don't forget to do this!).
